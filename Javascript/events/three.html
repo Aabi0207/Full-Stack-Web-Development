@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval</title>
+</head>
+<body>
+    <h1>Chai or Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    document.querySelector("#start").addEventListener('click', () => {
+        const IntervalId = setInterval(printNameDate, 2000, "Abhishek")
+
+        document.querySelector("#stop").addEventListener('click', () => {
+            clearInterval(IntervalId)
+        });
+    })
+
+
+
+    function printNameDate(name) {
+        console.log(`Name: ${name}, Date: ${Date.now().toLocaleString("en-IN")}`)
+    }
+</script>
+</html>
