@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trelo Clone</title>
     <link rel="stylesheet" href="../../src/output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <nav class="flex justify-between ml-24 mr-20">
+    <nav class="flex justify-between ml-24 mr-20 sticky bg-white">
       <div class="flex space-x-5 mt-2">
         <div class="logo">
           <img
@@ -85,21 +91,155 @@
     >
       <div class="right-section w-[33vw] ml-[13vw]">
         <div class="">
-          <span class="text-[40px] font-semibold text-white block leading-[1.15] mt-7">Trello brings all your tasks, teammates, and tools together</span>
-          <span class="text-[16px] mt-4 block text-white ">Keep everything in the same place—even if your team isn’t.</span>
+          <span
+            class="text-[40px] font-semibold text-white block leading-[1.15] mt-7"
+            >Trello brings all your tasks, teammates, and tools together</span
+          >
+          <span class="text-[16px] mt-4 block text-white"
+            >Keep everything in the same place—even if your team isn’t.</span
+          >
         </div>
         <div class="mt-6">
-          <input class="w-[20vw] mr-[1vw] h-10 p-4 rounded-sm text-sm" type="email" name="email" id="email" placeholder="Email" />
-          <button class="p-2 bg-[#2962ff] pl-4 pr-4 text-white hover:bg-[#0747a6] rounded-sm text-[15px]">Sign up-It's free!</button>
+          <input
+            class="w-[20vw] outline-none mr-[1vw] h-10 p-4 rounded-sm text-sm"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+          <button
+            class="p-2 bg-[#2962ff] pl-4 pr-4 text-white hover:bg-[#0747a6] rounded-sm text-[15px]"
+          >
+            Sign up-It's free!
+          </button>
         </div>
         <div class="mt-5 text-sm flex space-x-1 hover:space-x-2">
-          <span class="text-gray-300 underline hover:text-white">Watch Video</span>
+          <span class="text-gray-300 underline hover:text-white"
+            >Watch Video</span
+          >
           <img class="" src="treloCloneAssets/play.svg" alt="play-button" />
         </div>
       </div>
-      <div class="w-[41vw] mr-[8vw] z-10"><img src="treloCloneAssets/TrelloUICollage_4x.webp" alt="" /></div>
-      <img class="absolute bottom-0" src="treloCloneAssets/white-wave-bg.svg" alt="">
+      <div class="w-[41vw] mr-[8vw] z-10">
+        <img src="treloCloneAssets/TrelloUICollage_4x.webp" alt="" />
+      </div>
+      <img
+        class="absolute bottom-0"
+        src="treloCloneAssets/white-wave-bg.svg"
+        alt=""
+      />
     </div>
-    
+    <section class="w-full flex justify-center">
+      <div class="w-[75%]">
+        <div class="initial-info flex flex-col space-y-3">
+          <span class="text-[15px] font-semibold text-black">Trello 101</span>
+          <span class="text-2xl font-semibold text-black"
+            >A Productivity Powerhouse</span
+          >
+          <p class="text-[17px] w-[60%] font-normal text-black">
+            Simple, flexible, and powerful. All it takes are boards, lists, and
+            cards to get a clear view of who’s doing what and what needs to get
+            done. Learn more in our
+            <a href="#" class="text-blue-600 underline"
+              >guide for getting started.</a
+            >
+          </p>
+        </div>
+        <div class="flex mt-7 space-x-5">
+          <div id="info" class="w-[60%]">
+            <div class="flex space-x-2 rounded-md ">
+              <div class="seperator invisible w-6 bg-sky-300 rounded-l-md"></div>
+              <div class="p-2">
+                <span class="font-semibold text-black text-[14px]">Boards</span>
+                <p class="text-[13px] font-medium text-gray-700">
+                  Trello boards keep tasks organized and work moving forward. In
+                  a glance, see everything from "things to do" to "aww yeah, we
+                  did it!"
+                </p>
+              </div>
+            </div>
+            <div class="flex space-x-2 rounded-md mt-4">
+              <div class="seperator invisible w-6 bg-sky-300 rounded-l-md"></div>
+              <div class="p-2">
+                <span class="font-semibold text-black text-[14px]">Lists</span>
+                <p class="text-[13px] font-medium text-gray-700">
+                  The different stages of a task. Start as simple as To Do,
+                  Doing or Done—or build a workflow custom fit to your team's
+                  needs. There's no wrong way to Trello.
+                </p>
+              </div>
+            </div>
+            <div class="flex space-x-2 rounded-md mt-4">
+              <div class="seperator invisible w-6 bg-sky-300 rounded-l-md"></div>
+              <div class="p-2">
+                <span class="font-semibold text-black text-[14px]">Cards</span>
+                <p class="text-[13px] font-medium text-gray-700">
+                  Cards represent tasks and ideas and
+                  hold all the information to get the job
+                  done. As you make progress, move cards
+                  across lists to show their status.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="carsoule">
+            <div id="carouselExample" class="carousel slide" style="transition: none !important;">
+              <div class="carousel-inner">
+                <div class="carousel-item active" style="transition: none !important;">
+                  <img
+                    src="treloCloneAssets/image1.webp"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" style="transition: none !important;">
+                  <img
+                    src="treloCloneAssets/image2.webp"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" style="transition: none !important;">
+                  <img
+                    src="treloCloneAssets/image3.webp"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon visually-hidden"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon visually-hidden"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
 </html>
