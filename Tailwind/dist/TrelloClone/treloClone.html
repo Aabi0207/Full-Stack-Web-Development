@@ -11,6 +11,11 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      #images-and-all{
+        background-image: linear-gradient(to top, #e6fcff, white);
+      }
+    </style>
   </head>
   <body>
     <nav class="flex justify-between ml-24 mr-20 sticky bg-white">
@@ -129,7 +134,7 @@
         alt=""
       />
     </div>
-    <section class="w-full flex justify-center">
+    <section class="w-full flex justify-center" id="images-and-all">
       <div class="w-[75%]">
         <div class="initial-info flex flex-col space-y-3">
           <span class="text-[15px] font-semibold text-black">Trello 101</span>
@@ -147,8 +152,10 @@
         </div>
         <div class="flex mt-7 space-x-5">
           <div id="info" class="w-[60%]">
-            <div class="flex space-x-2 rounded-md ">
-              <div class="seperator invisible w-6 bg-sky-300 rounded-l-md"></div>
+            <div class="flex space-x-2 rounded-md box-list">
+              <div
+                class="seperator invisible w-6 bg-sky-300 rounded-l-md"
+              ></div>
               <div class="p-2">
                 <span class="font-semibold text-black text-[14px]">Boards</span>
                 <p class="text-[13px] font-medium text-gray-700">
@@ -158,8 +165,10 @@
                 </p>
               </div>
             </div>
-            <div class="flex space-x-2 rounded-md mt-4">
-              <div class="seperator invisible w-6 bg-sky-300 rounded-l-md"></div>
+            <div class="flex space-x-2 rounded-md mt-4 box-list">
+              <div
+                class="seperator invisible w-6 bg-sky-300 rounded-l-md"
+              ></div>
               <div class="p-2">
                 <span class="font-semibold text-black text-[14px]">Lists</span>
                 <p class="text-[13px] font-medium text-gray-700">
@@ -169,37 +178,45 @@
                 </p>
               </div>
             </div>
-            <div class="flex space-x-2 rounded-md mt-4">
-              <div class="seperator invisible w-6 bg-sky-300 rounded-l-md"></div>
+            <div class="flex space-x-2 rounded-md mt-4 box-list">
+              <div
+                class="seperator invisible w-6 bg-sky-300 rounded-l-md"
+              ></div>
               <div class="p-2">
                 <span class="font-semibold text-black text-[14px]">Cards</span>
                 <p class="text-[13px] font-medium text-gray-700">
-                  Cards represent tasks and ideas and
-                  hold all the information to get the job
-                  done. As you make progress, move cards
-                  across lists to show their status.
+                  Cards represent tasks and ideas and hold all the information
+                  to get the job done. As you make progress, move cards across
+                  lists to show their status.
                 </p>
               </div>
             </div>
           </div>
           <div id="carsoule">
-            <div id="carouselExample" class="carousel slide" style="transition: none !important;">
+            <div
+              id="carouselExample"
+              class="carousel slide"
+              style="transition: none !important"
+            >
               <div class="carousel-inner">
-                <div class="carousel-item active" style="transition: none !important;">
+                <div
+                  class="carousel-item active first-item"
+                  style="transition: none !important"
+                >
                   <img
                     src="treloCloneAssets/image1.webp"
                     class="d-block w-100"
                     alt="..."
                   />
                 </div>
-                <div class="carousel-item" style="transition: none !important;">
+                <div class="carousel-item second-item" style="transition: none !important">
                   <img
                     src="treloCloneAssets/image2.webp"
                     class="d-block w-100"
                     alt="..."
                   />
                 </div>
-                <div class="carousel-item" style="transition: none !important;">
+                <div class="carousel-item third-item" style="transition: none !important">
                   <img
                     src="treloCloneAssets/image3.webp"
                     class="d-block w-100"
@@ -242,4 +259,5 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
+  <script src="script.js"></script>
 </html>
