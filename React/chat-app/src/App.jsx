@@ -5,10 +5,14 @@ import "./App.css";
 import { TodoProvider } from "./context";
 
 function App() {
-  const [todo, setTodo] = useState([]);
+  const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
     
+  }
+
+  const deleteTodo = (id) => {
+
   }
 
   return (
@@ -18,7 +22,9 @@ function App() {
           <h1 className="text-2xl font-bold text-center mb-8 mt-2">
             Manage Your Todos
           </h1>
-          <div className="mb-4">{/* Todo form goes here */}</div>
+          <div className="mb-4">
+            <Form />
+          </div>
           <div className="flex flex-wrap gap-y-3">
             {/*Loop and Add TodoItem here */}
           </div>
