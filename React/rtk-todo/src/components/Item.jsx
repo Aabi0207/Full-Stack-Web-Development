@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { removeTodo, updateTodo, ToggleEvent } from "../features/todoSlices";
 
-function Item({}) {
-  const todo = { id: 1, todo: "What is your name", completed: false };
-  const [tudoMsg, setTodoMsg] = useState("This is the first todo")
-  const [isTodoEditable, setIsTodoEditable] = useState(false)
+function Item({ todo }) {
+  const [tudoMsg, setTodoMsg] = useState(todo.text);
+  const [isTodoEditable, setIsTodoEditable] = useState(false);
+
+  const dispatch = useDispatch();
 
   return (
     <div
@@ -14,28 +17,29 @@ function Item({}) {
         <input
           type="checkbox"
           checked={todo.completed}
-          onChange={!todo.completed}
+          onChange={() => dispatch(ToggleEvent(todo.id))}
           className="cursor-pointer"
         />
         <input
           type="text"
-          className={`text-black text-lg font-semibold outline-none 
-            ${todo.completed?"bg-[#e6e6fa] line-through": "bg-[#e6fae6]"}`}
+          className={`text-black text-lg font-semibold outline-none w-[45vw] 
+            ${todo.completed ? "bg-[#e6e6fa] line-through" : "bg-[#e6fae6]"}`}
           value={tudoMsg}
-          onChange={(e) => e.target.value}
+          onChange={(e) => setTodoMsg(e.target.value)}
           readOnly={!isTodoEditable}
         />
       </div>
       <div className="left flex space-x-4">
-        <button className="bg-white shadow-lg rounded-xl px-2">
-            {isTodoEditable?"📁":"🖋️"}
+        <button
+          className="bg-white shadow-lg rounded-xl px-2"
+          onClick={() => setIsTodoEditable((prev) => !prev)}
+        >
+          {isTodoEditable ? "📁" : "🖋️"}
         </button>
-        <button className="bg-white shadow-lg rounded-xl px-2">
-            ❌
-        </button>
+        <button className="bg-white shadow-lg rounded-xl px-2" onClick={() => dispatch(removeTodo(todo.id))}>❌</button>
       </div>
     </div>
   );
 }
 
-export default Item
+export default Item;
